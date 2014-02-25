@@ -11,6 +11,7 @@ var url = process.argv[2];
 
 var info = "";
 
+// return value is not used
 var req = http.get(url, function(response){
 
     response.on("data", function (data) {
