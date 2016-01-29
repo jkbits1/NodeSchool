@@ -8,13 +8,48 @@ module.exports = loadUsers;
 
 function loadUsers(userIds, load, done) {
 
-    var users = [];
+//    return done([{id:1, name:"one"}]);
 
-    for (var i = 0; i < userIds.length; i++) {
+    var processedCount = 0;
+    var targetCount = userIds.length;
 
-        users.push(load(userIds[i]));
+    var users = userIds.map(function(val, i, arr){
+
+        return val;
+    });
+
+    function getUserInfo(user){
+
+        var index = users.indexOf(user.id);
+
+        users[index] = {id: user.id, name: user.name};
+
+        processedCount++;
+
+        if (processedCount >= targetCount){
+
+            done(users);
+        }
+
     }
 
-    return users;
+    userIds.forEach(function(id, index, arr){
+
+        load(id,
+            getUserInfo
+        );
+    });
+
+//    function showWaiting() {
+//        console.log("waiting");
+//    }
+//
+//    while (processedCount < 1 //targetCount
+//        ){
+//
+//        setTimeout(showWaiting, 10);
+//    }
+
+    return;
 }
 

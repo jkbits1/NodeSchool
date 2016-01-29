@@ -2,18 +2,20 @@ import React from 'react';
 
 export default class TodoBox extends React.Component {
   render() {
-    return <div className="todoBox">
+    return (
+      <div className="todoBox">
       <h1>Todos</h1>
-      <TodoList />
-      <TodoForm />
+      //<TodoList />
+      //<TodoForm />
     </div>
+    );
   }
 }
 
 class TodoList extends React.Component {
   render() {
-    return
-      <div class="todoList">
+    return (
+      <div className="todoList">
         <table style={{border: "2px solid black"}}>
           <tbody>
             <Todo title="Shopping">Milk</Todo>
@@ -21,14 +23,17 @@ class TodoList extends React.Component {
           </tbody>
         </table>
       </div>
+    );
   }
 }
 
 class Todo extends React.Component {
   render() {
-    return
+    return (
       <tr>
+        <td style="border:1px solid black;">this.props.title</td>
       </tr>
+    );
   }
 }
 //<td style="border:1px solid black;">this.props.title</td>

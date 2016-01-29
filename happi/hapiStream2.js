@@ -4,10 +4,8 @@
 
 //babel start.es6 --out-file start.js --watch
 
-var start = require('./start.js');
+var start = require('./start2.js');
 
-var fs = require('fs');
-var rot13 = require('rot13-transform');
 //require('babel-core').transform("code", {
 //  plugins: ["transform-es2015-arrow-functions"]
 //});

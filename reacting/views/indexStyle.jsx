@@ -16,7 +16,7 @@ class TodoList extends React.Component {
   render() {
     return (
       <div className="todoList">
-        <table style={{border: "2px solid black"}}>
+        <table style={style.tableContent}>
           <tbody>
             <Todo title="Shopping">Milk</Todo>
             <Todo title="Hair cut">13:00</Todo>
@@ -55,5 +55,11 @@ class Todo extends React.Component {
 
 Todo.propTypes = {
   title: React.PropTypes.number.isRequired
+};
+
+let style = {
+  tableContent: {
+    border: "1px solid black"
+  }
 };
 

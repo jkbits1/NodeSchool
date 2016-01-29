@@ -20,6 +20,7 @@ class TodoList extends React.Component {
           <tbody>
             <Todo title="Shopping">Milk</Todo>
             <Todo title="Hair cut">13:00</Todo>
+            <Todo title="123"></Todo>
           </tbody>
         </table>
       </div>
@@ -37,4 +38,8 @@ class Todo extends React.Component {
     );
   }
 }
+
+Todo.propTypes = {
+  title: React.PropTypes.number.isRequired
+};
 

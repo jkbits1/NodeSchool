@@ -4,7 +4,7 @@
 
 
 var foot = {
-  kick: function () {
+  kick: () => {
     this.yelp = "Ouch!";
     setImmediate(() => {
       console.log(this.yelp);

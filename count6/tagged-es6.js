@@ -3,21 +3,21 @@
  */
 
 
-//var username = process.argv[2];
-var username = "matt";
-//var comment = process.argv[3];
-var comment = "programming tests";
+var username = process.argv[2];
+//var username = "matt";
+var comment = process.argv[3];
+//var comment = "programming tests";
 
 var namePart = `<strong>${username} says</strong>:`;
 var commentPart = ``;
 
-var newStr = html`<b>${username} says</b>: "${comment}dd"`;
+var newStr = html`<b>${username} says</b>: "${comment}"`;
 
 console.log(newStr);
 
 function html(...strElems) {
 
-  console.log(strElems.length);
+  //console.log(strElems.length);
 
   //strToCheck.forEach(str => console.log(str));
   var staticElems = strElems[0];
@@ -27,7 +27,7 @@ function html(...strElems) {
   //console.log(newStr);
 
   var newComment = strElems[2];
-  console.error(newComment);
+  //console.error(newComment);
 
   newComment = newComment.replace(/&/g, "&amp;");
   newComment = newComment.replace(/'/g, "&apos;");
@@ -36,7 +36,7 @@ function html(...strElems) {
   newComment = newComment.replace(/>/g, "&gt;");
 
   //console.log(newComment);
-  newComment += strElems[3];
+  newComment += staticElems[2];
 
   return newStr + newComment;
 

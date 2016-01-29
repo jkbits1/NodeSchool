@@ -5,9 +5,9 @@ export default class TodoBox extends React.Component {
     return (
       <div className="todoBox">
       <h1>Todos</h1>
-      //<TodoList />
-      //<TodoForm />
-    </div>
+      <TodoList />
+
+      </div>
     );
   }
 }
@@ -31,17 +31,10 @@ class Todo extends React.Component {
   render() {
     return (
       <tr>
+        <td style={{border: "1px solid black"}}>{this.props.title}</td>
+        <td style={{border: "1px solid black"}} >{this.props.children}</td>
       </tr>
     );
   }
 }
-//<td style="border:1px solid black;">this.props.title</td>
-//<td style="border:1px solid black;" >this.props.children</td>
 
-class TodoForm extends React.Component {
-  render() {
-    return <div class="todoForm">
-      I am a TodoForm.
-    </div>
-  }
-}

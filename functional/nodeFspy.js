@@ -4,7 +4,7 @@
 
 "use strict";
 
-//module.exports =
+module.exports =
     function Spy(object, methodName){
 
 
@@ -40,13 +40,13 @@ return res;
 
 //
 
-Spy.count;
-
-
-var spy = //new
-    Spy(console, 'log');
+//Spy.count;
 //
-console.log('test');
-
-spy.count;
+//
+//var spy = //new
+//    Spy(console, 'log');
+////
+//console.log('test');
+//
+//spy.count;
 
